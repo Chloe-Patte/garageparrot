@@ -112,13 +112,7 @@ class pdoGarage {
     return $result;
   }
 
-  public static function getVoiture($id){
-    $request = "SELECT* FROM VOITURES WHERE ID = $id";
-    $prepa = self::$monPdo->prepare($request);
-    $prepa->execute();
-    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
-    return $result[0];
-  }
+  
 
   public static function getLastVoiture(){
     $request = "SELECT ID FROM VOITURES ORDER BY ID DESC LIMIT 1;";
