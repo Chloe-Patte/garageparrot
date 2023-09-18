@@ -6,6 +6,11 @@
   switch($action){
     case 'consultervo':
       {
+        if(is_array($connexionGarage->getVoitures())){
+          $lesVoitures = $connexionGarage->getVoitures();
+        }else {
+          $lesVoitures = [];
+        }
         include('vues/header.php');
         include('vues/vehicules_occasion.php');
         include('./vues/footer.php');
@@ -17,7 +22,7 @@
         include('./vues/qui_sommes_nous.php');
         include('./vues/footer.php');
         break;
-      }
+      } 
     case'consulterfdc':
       {
         include('./vues/formulaire-contact.php');
@@ -31,6 +36,7 @@
 
     case 'consultervoitures':
       {
+        $voiture = $connexionGarage->getVoiture($_REQUEST['id']);
         include('./vues/header.php');
         include('./vues/slider-voitures.php');
         include('./vues/voitures.php');
