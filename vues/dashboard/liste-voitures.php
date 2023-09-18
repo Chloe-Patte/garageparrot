@@ -1,4 +1,4 @@
-<div class="pt-12" id="voiture">
+<div class="pt-12" id="voiture"> 
   <h2 class="text-2xl font-bold text-center">
     Véhicules disponibles dans la concession
   </h2>
