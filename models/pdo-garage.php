@@ -12,7 +12,7 @@ class pdoGarage {
   public function __destruct(){
     self::$monPdo = null;
   }
-
+ 
   public static function getPdoGarage(){
     if(self::$monPdoGarage == null){
       self::$monPdoGarage = new pdoGarage();
@@ -110,6 +110,15 @@ class pdoGarage {
     $prepa->execute();
     $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
+  }
+
+  public static function getVoiture($id){
+    $request = "SELECT* FROM VOITURES WHERE ID = $id";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+    return $result[0];
+    
   }
 }
 
