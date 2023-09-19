@@ -138,7 +138,7 @@ SET @dernier_id_voiture_mercedes = LAST_INSERT_ID();
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Climatisation manuelle, Douche, Toit relevable, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto', @dernier_id_voiture_mercedes);
 
-INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`);
+INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Van', @dernier_id_voiture_mercedes);
 
 INSERT INTO `IMAGES` (`ID`, `URL`, `VOITURE_ID`)
