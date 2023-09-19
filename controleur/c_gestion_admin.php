@@ -295,16 +295,6 @@
       break;
     }
         
-
-
-    case 'logout':
-      {
-        session_destroy();
-        include('vues/connexion-admin.php');
-        break;
-      }
-
-
     case 'horaires':
       {       
       if(is_array($connexionGarage->getHoraires())){
@@ -318,6 +308,16 @@
       ?></div><?php
       break;
     }
+
+    case 'logout':
+      {
+        session_destroy();
+        include('vues/connexion-admin.php');
+        break;
+      }
+
+
+    
 
     }
 
