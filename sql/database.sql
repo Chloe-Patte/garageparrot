@@ -73,6 +73,17 @@ CREATE TABLE IF NOT EXISTS HORAIRES (
 );
 
 
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Mercedes', 'Vito', '2019', 'Diesel', 'Manuelle', '144 DCI', '52000', '51000', '4', '4', 'Blanc', '7', '136');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Kia', 'Niro EV', '2023', 'Electrique', 'Automatique', '150 kwh', '45640', '5890', '5', '5', 'Blanc', '4', '204');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Kia', 'Sportage', '2023', 'Hybride rechargeable', 'Automatique', '1.6 T-GDI', '50790', '10000', '5', '5', 'Vert', '11', '265');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Toyota', 'Aygo-X', '2022', 'Essence', 'Manuelle', '1.O VVT-i', '12000', '60200', '5', '5', 'Blanc', '4', '72');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Peugeot', '208', '2021', 'Essence', 'Manuelle', '1.2 Pure Tech', '13400', '54000', '5', '5', 'Noir', '5', '100');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Seat', 'Arona', '2022', 'Essence', 'Manuelle', '1.O TCI', '26490', '2210', '5', '5', 'Blanc', '6', '115');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Cupra', 'Leon VZ', '2022', 'Hybride rechargeable', 'Automatique', '1.4 E hybride', '38990', '13969', '5', '5', 'Noir', '8', '240');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Cupra', 'Formentor', '2022', 'Diesel', 'Automatique', '2.0 TDI', '36990', '16723', '5', '5', 'Noir', '8', '150');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Mercedes', 'A 180 d', '2021', 'Diesel', 'Automatique', '7 G DCT', '28490', '49093', '5', '5', 'Blanc', '6', '116');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Kia', 'CEED', '2022', 'Essence', 'Manuelle', '1.0 T-GDI', '19490', '34346', '5', '5', 'Gris', '5', '100');
+INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'VolksWagen', 'Golf', '2017', 'Essence', 'Manuelle', '1.O TSI', '15490', '102189', '5', '5', 'Blanc', '6', '110');
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Seat', 'Arona', '2019', 'Essence', 'Manuelle', '1.O ECO TSI', '18990', '10008', '5', '5', 'Gris', '6', '115');
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Renault', 'Captur', '2022', 'Essence', 'Manuelle', 'TCe 90-21', '20450', '15102', '5', '5', 'Bleu', '5', '90');
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Dacia', 'Duster', '2018', 'Diesel', 'Manuelle', 'dCI 110 4x2', '13800', '101900', '5', '5', 'Noir', '6', '110');
@@ -90,6 +101,18 @@ INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISS
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Mitsubishi', 'Outlander', '2019', 'Hybride', 'Automatique', 'PHEV Outlander 2.4 PHEV Twin motor 4WD', '29490', '62657', '5', '5', 'Blanc', '5', '224');
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`) VALUES (NULL, 'Citroën', 'C5 Aircross', '2018', 'Diesel', 'Automatique', 'Blue HDI S&S FILL EAT8', '33460', '4730', '5', '5', 'Gris', '6', '130');
 
+
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Douche, Toit relevable, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto', NULL);
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique bi-zone, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, Limiteur & régulateur de vitesse adaptatif, Commandes au volant, Lane Assist', NULL);
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique bi-zone, Toit ouvrant & panoramique, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, Sièges avant ventilé, Jantes alu, Limiteur & régulateur de vitesse adaptatif, Commandes au volant', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, LRétroviseur électrique, Ecran tactile 7"', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Vitres électriques, ABS, Commandes au volant, Bluetooth, Allume-cigare', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, 2 sièges ISOFIX, Pack Drive Assist XL, Jantes Alliage 18"','');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, Banquette 2/3 1/3, 2 USB-C avant/arrière, Caméra de recul, Bluetooth, Apple CarPlay, Jantes alu', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, Sièges baquets en cuir noir, 2 USB-C avant/arrière, Pack Drive Assist XL, Caméra de recul, Bluetooth, Apple CarPlay, Jantes allliage 19"', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, Pack Confort, Commandes au volant, Bluetooth, Apple CarPlay, Android Auto, Ecran tactile 10"', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, ABS, Accourdoir central arrière, Radar de recul, Bluetooth, Apple CarPlay, Android Auto, Lane Assist', '');
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Peinture métalisée, Radar de recul avant/arrière, Bluetooth, Apple CarPlay, Android Auto', '');
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuellle, Aide au démarrage en côte, Start & Stop, Radar de recul, Bluetooth', '');
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, Roue de secours, Pack de sécurité standard, Radar de recul avant/arrière, Bluetooth', '');
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Roue de secours + cric, Feux diurne LED, Airbag rideau, Radar de recul, Bluetooth', '');
@@ -107,35 +130,26 @@ INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climati
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation automatique, Pack sécurité, Aide au démarrage en côte, Caméra de recul, Commandes au volant, Bluetooth, Apple CarPlay, Android Auto', '');
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES (NULL, 'Climatisation manuelle, Pack attelage, Commande vocale, Commandes au volant, Caméra & radar de recul, Bluetooth, Ecran tactile 10"', '');
 
---Requête Mercedes Vito
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`)
 VALUES (NULL, 'Mercedes', 'Vito', '2019', 'Diesel', 'Manuelle', '144 DCI', '52000', '51000', '4', '4', 'Blanc', '7', '136');
 
 SET @dernier_id_voiture_mercedes = LAST_INSERT_ID();
 
-INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES 
-(NULL, 'Climatisation manuelle', @dernier_id_voiture_mercedes),
-(NULL, 'Douche', @dernier_id_voiture_mercedes),
-(NULL, 'Toit relevable', @dernier_id_voiture_mercedes),
-(NULL, 'Caméra de recul', @dernier_id_voiture_mercedes),
-(NULL, 'Bluetooth', @dernier_id_voiture_mercedes),
-(NULL, 'Android Auto', @dernier_id_voiture_mercedes),
-(NULL, 'Apple CarPlay', @dernier_id_voiture_mercedes),
-(NULL, 'Limiteur & régulateur de vitesse', @dernier_id_voiture_mercedes),
-(NULL, 'Vitres électriques' , @dernier_id_voiture_mercedes),
-(NULL, 'Commandes au volant', @dernier_id_voiture_mercedes);
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
+VALUES (NULL, 'Climatisation manuelle, Douche, Toit relevable, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto', @dernier_id_voiture_mercedes);
 
-INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`);
+INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Van', @dernier_id_voiture_mercedes);
 
 INSERT INTO `IMAGES` (`ID`, `URL`, `VOITURE_ID`)
 VALUES (NULL, LOAD_FILE('./images/voiture1.png'), @dernier_id_voiture_mercedes );
 
 
--- Requête Kia Niro EV 2023
+-- Répétez le processus pour la voiture Kia
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`)
 VALUES (NULL, 'Kia', 'Niro EV', '2023', 'Electrique', 'Automatique', '150 kwh', '45640', '5890', '5', '5', 'Blanc', '4', '204');
 
+-- Récupérez l'ID de la voiture Kia que vous venez d'insérer
 SET @dernier_id_voiture_kia = LAST_INSERT_ID();
 
 -- Insérez les équipements pour la voiture Kia en utilisant l'ID récupéré
@@ -143,15 +157,8 @@ INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Climatisation automatique bi-zone, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, Limiteur & régulateur de vitesse adaptatif, Commandes au volant, Lane Assist', @dernier_id_voiture_kia);
 
 
--- Requêtes jours d'ouverture
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Lundi', '10h-12h', '14h-19h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mardi', '8h-12h', '14h-19h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mercredi', '8h-12h', '14h-19h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Jeudi', '8h-12h', '14h-19h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Vendredi', '8h-12h', '14h-19h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Samedi', '8h-12h', '14h-18h');
-INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Dimanche', 'Fermé', 'Fermé');
-=======
+
+
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES 
 (NULL, 'Climatisation automatique bi-zone', @dernier_id_voiture_kia),
 (NULL, 'Caméra de recul', @dernier_id_voiture_kia),
@@ -364,7 +371,16 @@ INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES
 
 INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Citadine', @dernier_id_voiture_volkswagen);
-
-
 -- Requête
+
+
+-- Requêtes jours d'ouverture
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Lundi', '10h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mardi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mercredi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Jeudi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Vendredi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Samedi', '8h-12h', '14h-18h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Dimanche', 'Fermé', 'Fermé');
+
 
