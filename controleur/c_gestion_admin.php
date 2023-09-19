@@ -147,6 +147,8 @@
       {
         $add = $connexionGarage->addCommentaire($_POST['motif'], $_POST['nom'], $_POST['prenom'], $_POST['email'],$_POST['note'], $_POST['message']);
 
+        print_r($add . "vv");
+
         if(is_array($connexionGarage->getCommentaires())){
           $lesCommentaires = $connexionGarage->getCommentaires();
         }else {
@@ -160,155 +162,21 @@
         break;
       } 
 
-    case 'voiture':
-      {
-        
-        if(is_array($connexionGarage->getVoitures())){
-          $lesVoitures = $connexionGarage->getVoitures();
-        }else {
-          $lesVoitures = [];
-        }
-        ?><div class="inline-flex"><?php
-          include('vues/dashboard/dashboard.php');
-          include('vues/dashboard/liste-voitures.php')
-        ?></div><?php
-
-        break;
-      }
-    
-    case 'formaddvoiture':
-      {
-        ?><div class="inline-flex"><?php
-          include('vues/dashboard/dashboard.php');
-          include('vues/dashboard/addvoiture.php');
+      case 'voiture':
+        {
+          
+          if(is_array($connexionGarage->getVoitures())){
+            $lesVoitures = $connexionGarage->getVoitures();
+          }else {
+            $lesVoitures = [];
+          }
+          ?><div class="inline-flex"><?php
+            include('vues/dashboard/dashboard.php');
+            include('vues/dashboard/liste-voitures.php')
           ?></div><?php
-        break;
-      }
-
-    case 'ajoutervoiture':{
-      $add = $connexionGarage->addVoiture(
-        $_POST['marque'], 
-        $_POST['modele'], 
-        $_POST['annee'], 
-        $_POST['energie'],
-        $_POST['trans'], 
-        $_POST['prix'], 
-        $_POST['motor'], 
-        $_POST['km'], 
-        $_POST['porte'], 
-        $_POST['place'], 
-        $_POST['couleur'], 
-        $_POST['cvfisc'], 
-        $_POST['cvdin'],
-        $_POST['equip1'], 
-        $_POST['equip2'], 
-        $_POST['equip3'], 
-        $_POST['equip4'], 
-        $_POST['equip5'], 
-        $_POST['equip6'], 
-        $_POST['equip7'], 
-        $_POST['equip8'], 
-        $_POST['equip9'], 
-        $_POST['equip10']
-      );
-
-      if(is_array($connexionGarage->getVoitures())){
-        $lesVoitures = $connexionGarage->getVoitures();
-      }else {
-        $lesVoitures = [];
-      }
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/liste-voitures.php');
-      ?></div><?php
-      break;
-    }
-
-    case 'supprimervoiture':{
-      $voiture = $connexionGarage->deleteVoiture($_POST['id']);
-
-      if(is_array($connexionGarage->getVoitures())){
-        $lesVoitures = $connexionGarage->getVoitures();
-      }else {
-        $lesVoitures = [];
-      }
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/liste-voitures.php');
-      ?></div><?php
-      break;
-    }
-
-    case 'formmodifiervoiture':{
-      $voiture = $connexionGarage->getVoiture($_POST['id']);
-      $equipement = $connexionGarage->getEquipement($_POST['id']);
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/updatevoiture.php');
-        ?></div><?php
-      break;
-    }
-
-    case 'updatevoiture':{
-      $add = $connexionGarage->updateVoiture(
-        $_POST['id'], 
-        $_POST['marque'], 
-        $_POST['modele'], 
-        $_POST['annee'], 
-        $_POST['energie'],
-        $_POST['trans'], 
-        $_POST['prix'], 
-        $_POST['motor'], 
-        $_POST['km'], 
-        $_POST['porte'], 
-        $_POST['place'], 
-        $_POST['couleur'], 
-        $_POST['cvfisc'], 
-        $_POST['cvdin'],
-        $_POST['equip1'], 
-        $_POST['equip2'], 
-        $_POST['equip3'], 
-        $_POST['equip4'], 
-        $_POST['equip5'], 
-        $_POST['equip6'], 
-        $_POST['equip7'], 
-        $_POST['equip8'], 
-        $_POST['equip9'], 
-        $_POST['equip10']
-      );
-
-      if(is_array($connexionGarage->getVoitures())){
-        $lesVoitures = $connexionGarage->getVoitures();
-      }else {
-        $lesVoitures = [];
-      }
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/liste-voitures.php');
-      ?></div><?php
-      break;
-    }
-
-    case 'supprimervoiture':{
-      $voiture = $connexionGarage->deleteVoiture($_POST['id']);
-
-      if(is_array($connexionGarage->getVoitures())){
-        $lesVoitures = $connexionGarage->getVoitures();
-      }else {
-        $lesVoitures = [];
-      }
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/liste-voitures.php');
-      ?></div><?php
-      break;
-    }
   
+          break;
+        }
 
     case 'logout':
       {
