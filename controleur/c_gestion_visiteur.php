@@ -37,6 +37,7 @@
     case 'consultervoitures':
       {
         $voiture = $connexionGarage->getVoiture($_REQUEST['id']);
+        $equipements = $connexionGarage->getEquipement($_REQUEST['id']);
         include('./vues/header.php');
         include('./vues/slider-voitures.php');
         include('./vues/voitures.php');

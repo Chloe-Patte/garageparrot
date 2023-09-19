@@ -201,9 +201,8 @@ class pdoGarage {
 
     $equipement = $connexionGarage->getEquipement($id);
 
-    print_r($equipement);
-
-    $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip10 WHERE `EQUIPEMENTS`.`ID` = $equipement[0]['ID']; 
+    
+   $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip10 WHERE `EQUIPEMENTS`.`ID` = $equipement[0]['ID']; 
     UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip1 WHERE `EQUIPEMENTS`.`ID` = $equipement[1]['ID']; 
     UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip2 WHERE `EQUIPEMENTS`.`ID` = $equipement[2]['ID']; 
     UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip3 WHERE `EQUIPEMENTS`.`ID` = $equipement[3]['ID']; 
@@ -228,20 +227,23 @@ class pdoGarage {
     $prepa->bindValue(':equip10', $equip10);
 
     $prepa->execute();
-
     $result = $prepa-> rowCount();
 
-    return $result;
+      return $result;
+
+    
   }
 
   public static function deleteVoiture($id){
+    $request = "DELETE FROM EQUIPEMENTS WHERE VOITURE_ID='".$id."'";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+
     $request = "DELETE FROM VOITURES WHERE ID='".$id."'";
     $prepa = self::$monPdo->prepare($request);
     $prepa->execute();
 
-    $request = "DELETE FROM EQUIPEMENTS WHERE VOITURE_ID='".$id."'";
-    $prepa = self::$monPdo->prepare($request);
-    $prepa->execute();
+    
 
     $result = $prepa-> rowCount();
     return $result;
@@ -263,5 +265,12 @@ class pdoGarage {
     return $result;
   }
 
+  public static function getHoraires() {
+    $request = "SELECT * FROM HORAIRES";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+    return $result;
+  }
 }
 ?>

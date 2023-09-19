@@ -155,3 +155,13 @@ SET @dernier_id_voiture_kia = LAST_INSERT_ID();
 -- Insérez les équipements pour la voiture Kia en utilisant l'ID récupéré
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Climatisation automatique bi-zone, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, Limiteur & régulateur de vitesse adaptatif, Commandes au volant, Lane Assist', @dernier_id_voiture_kia);
+
+
+-- Requêtes jours d'ouverture
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Lundi', '10h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mardi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Mercredi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Jeudi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Vendredi', '8h-12h', '14h-19h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Samedi', '8h-12h', '14h-18h');
+INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Dimanche', 'Fermé', 'Fermé');

@@ -115,7 +115,7 @@
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Places</p>
-          <p>5</p>
+          <?php echo $voiture[0]['PLACES'] ?>
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Couleur</p>
@@ -125,7 +125,7 @@
         <div class="grid grid-cols-2">
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Portes</p>
-          <p>5</p>
+          <?php echo $voiture[0]['PORTES'] ?>
         </li>
         </div>
       </ul>

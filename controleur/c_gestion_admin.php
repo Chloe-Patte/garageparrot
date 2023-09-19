@@ -19,7 +19,7 @@
           }else{
             $mail = "";
           }
-   
+  
           if(isset($_POST['mdp'])){
             $mdp = $_POST['mdp'];
           }else{
@@ -147,6 +147,8 @@
       {
         $add = $connexionGarage->addCommentaire($_POST['motif'], $_POST['nom'], $_POST['prenom'], $_POST['email'],$_POST['note'], $_POST['message']);
 
+        print_r($add . "vv");
+
         if(is_array($connexionGarage->getCommentaires())){
           $lesCommentaires = $connexionGarage->getCommentaires();
         }else {
@@ -160,20 +162,19 @@
         break;
       } 
 
-    case 'voiture':
-      {
-        
-        if(is_array($connexionGarage->getVoitures())){
-          $lesVoitures = $connexionGarage->getVoitures();
-        }else {
-          $lesVoitures = [];
-        }
-        ?><div class="inline-flex"><?php
-          include('vues/dashboard/dashboard.php');
-          include('vues/dashboard/liste-voitures.php')
-        ?></div><?php
-
-        break;
+      case 'voiture':
+        {
+          
+          if(is_array($connexionGarage->getVoitures())){
+            $lesVoitures = $connexionGarage->getVoitures();
+          }else {
+            $lesVoitures = [];
+          }
+          ?><div class="inline-flex"><?php
+            include('vues/dashboard/dashboard.php');
+            include('vues/dashboard/liste-voitures.php');
+            ?></div><?php
+          break;
       }
     
     case 'formaddvoiture':
@@ -292,23 +293,7 @@
       ?></div><?php
       break;
     }
-
-    case 'supprimervoiture':{
-      $voiture = $connexionGarage->deleteVoiture($_POST['id']);
-
-      if(is_array($connexionGarage->getVoitures())){
-        $lesVoitures = $connexionGarage->getVoitures();
-      }else {
-        $lesVoitures = [];
-      }
-
-      ?><div class="inline-flex"><?php
-        include('vues/dashboard/dashboard.php');
-        include('vues/dashboard/liste-voitures.php');
-      ?></div><?php
-      break;
-    }
-  
+        
 
     case 'logout':
       {
@@ -316,6 +301,20 @@
         include('vues/connexion-admin.php');
         break;
       }
+
+    case 'horaires':
+      {       
+      if(is_array($connexionGarage->getHoraires())){
+        $lesHoraires = $connexionGarage->getHoraires();
+      }else {
+        $lesHoraires = [];
+      }
+      ?><div class="inline-flex"><?php
+        include('vues/dashboard/dashboard.php');
+        include('vues/dashboard/horaires.php');
+      ?></div><?php
+      break;
+    }
     }
 
 ?>
