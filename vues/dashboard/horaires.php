@@ -27,7 +27,7 @@
                       <th scope="col" class="p-4"><?php echo $horaire['MATIN'] ?></th>
                       <th scope="col" class="p-4"><?php echo $horaire['APRESMIDI'] ?></th>
                       <th scope="col" class="p-4">
-                        <form method="post" action="index.php?controleur=gestionadmin&action=supprimeremploye">
+                        <form method="post" action="index.php?controleur=gestionadmin&action=formmodifierhoraires">
                           <input type="hidden" value=<?php echo "\"".$horaire['ID']."\"" ?> name="id"/>
                             <button>
                               Modifier
