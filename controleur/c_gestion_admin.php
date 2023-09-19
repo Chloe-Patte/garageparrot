@@ -172,6 +172,7 @@
           }
           ?><div class="inline-flex"><?php
             include('vues/dashboard/dashboard.php');
+
             include('vues/dashboard/liste-voitures.php');
             ?></div><?php
           break;
@@ -295,12 +296,14 @@
     }
         
 
+
     case 'logout':
       {
         session_destroy();
         include('vues/connexion-admin.php');
         break;
       }
+
 
     case 'horaires':
       {       
@@ -315,6 +318,7 @@
       ?></div><?php
       break;
     }
+
     }
 
 ?>

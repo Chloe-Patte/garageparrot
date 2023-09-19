@@ -1,19 +1,18 @@
 <div class="max-w-screen-lg mx-auto">
   <!-- div prix, marque, modèle, motorisation, contact-->
-  <?php $prix_formate = number_format($voiture[0]['PRIX'], 0, ''); ?>
-
+  <?php $prix_formate = number_format($voiture['PRIX'], 0, ' '); ?>
   <div class="flex flex-wrap mb:20 sm:px-8 md:px-12 pt-8">
     <div class="w-full md:w-1/2 lg:w-2/6 px-4 text-center md:text-left lg:text-left">
       <h2 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-2xl xl:text-2xl md:ml-20 xl:ml-24">
-        <?php echo $voiture[0]['MARQUE'].' '.$voiture[0]['MODELE'] ?>
+        <?php echo $voiture['MARQUE'].' '.$voiture['MODELE']?>
       </h2>
       <h3 class="font-medium text-gray-600 text-medium md:text-xl lg:text-xl xl:text-xl md:ml-20 xl:ml-24">
-        <?php echo $voiture[0]['MOTORISATION'] ?>
+        <?php echo $voiture['MOTORISATION'] ?>
       </h3>  
     </div>
     <div class="w-full md:w-1/2 lg:w-2/6 px-4">
       <h2 class="font-bold text-clifford text-2xl md:text-2xl lg:text-3xl xl:text-3xl">
-        <?php echo $prix_formate . '€' ?>
+      <?php echo $prix_formate . '€' ?>
       </h2>
       <div class="flex justify-center">
         <a class="lg:hidden block text-white py-3 px-5 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
@@ -43,7 +42,7 @@
         <div>
           <div class="font-bold text-lg">Année</div>
           <p class="text-gray-700 text-base"> 
-            <?php echo $voiture[0]['ANNEE'] ?>
+            <?php echo $voiture['ANNEE'] ?>
           </p>
         </div>
       </div>
@@ -54,7 +53,7 @@
         <div>
           <div class="font-bold text-lg">Kilométrage</div>
           <p class="text-gray-700 text-base"> 
-            <?php echo $voiture[0]['KILOMETRAGE'] ?>
+            <?php echo $voiture['KILOMETRAGE'] ?>
           </p>
         </div>
       </div>
@@ -65,7 +64,7 @@
         <div>
           <div class="font-bold text-lg">Énergie</div>
           <p class="text-gray-700 text-base"> 
-            <?php echo $voiture[0]['ENERGIE'] ?>
+            <?php echo $voiture['ENERGIE'] ?>
           </p>
         </div>
       </div>
@@ -76,7 +75,7 @@
         <div>
           <div class="font-bold text-lg">Transmission</div>
           <p class="text-gray-700 text-base"> 
-            <?php echo $voiture[0]['TRANSMISSION'] ?>
+            <?php echo $voiture['TRANSMISSION'] ?>
           </p>
         </div>
       </div>
@@ -87,7 +86,7 @@
         <div>
           <div class="font-bold text-lg">Puissance</div>
           <p class="text-gray-700 text-base"> 
-            <?php echo $voiture[0]['CVR'] ?>
+            <?php echo $voiture['CVR'] ?>
           </p>
         </div>
       </div>
