@@ -112,10 +112,6 @@ class pdoGarage {
     return $result;
   }
 
-<<<<<<< Updated upstream
-=======
-  
-
   public static function getLastVoiture(){
     $request = "SELECT ID FROM VOITURES ORDER BY ID DESC LIMIT 1;";
     $prepa = self::$monPdo->prepare($request);
@@ -205,20 +201,16 @@ class pdoGarage {
 
     print_r($equipement);
 
-    $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = 
-    CASE 
-        WHEN `ID` = :id1 THEN :equip1
-        WHEN `ID` = :id2 THEN :equip2
-        WHEN `ID` = :id3 THEN :equip3
-        WHEN `ID` = :id4 THEN :equip4
-        WHEN `ID` = :id5 THEN :equip5
-        WHEN `ID` = :id6 THEN :equip6
-        WHEN `ID` = :id7 THEN :equip7
-        WHEN `ID` = :id8 THEN :equip8
-        WHEN `ID` = :id9 THEN :equip9
-        WHEN `ID` = :id10 THEN :equip10
-    END
-    WHERE `ID` IN (:id1, :id2, :id3, :id4, :id5, :id6, :id7, :id8, :id9, :id10);";
+    $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip10 WHERE `EQUIPEMENTS`.`ID` = $equipement[0]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip1 WHERE `EQUIPEMENTS`.`ID` = $equipement[1]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip2 WHERE `EQUIPEMENTS`.`ID` = $equipement[2]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip3 WHERE `EQUIPEMENTS`.`ID` = $equipement[3]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip4 WHERE `EQUIPEMENTS`.`ID` = $equipement[4]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip5 WHERE `EQUIPEMENTS`.`ID` = $equipement[5]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip6 WHERE `EQUIPEMENTS`.`ID` = $equipement[6]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip7 WHERE `EQUIPEMENTS`.`ID` = $equipement[7]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip8 WHERE `EQUIPEMENTS`.`ID` = $equipement[8]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip9 WHERE `EQUIPEMENTS`.`ID` = $equipement[9]['ID'];";
 
     $prepa = self::$monPdo->prepare($request);
 
@@ -253,7 +245,7 @@ class pdoGarage {
     return $result;
   }
 
->>>>>>> Stashed changes
+
   public static function getVoiture($id){
     $request = "SELECT* FROM VOITURES WHERE ID = $id";
     $prepa = self::$monPdo->prepare($request);
