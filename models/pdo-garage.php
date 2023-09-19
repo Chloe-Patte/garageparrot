@@ -112,8 +112,10 @@ class pdoGarage {
     return $result;
   }
 
-<<<<<<< Updated upstream
-=======
+
+  affichagevoiture
+ Updated upstream
+ main
   
 
   public static function getLastVoiture(){
@@ -205,6 +207,7 @@ class pdoGarage {
 
     print_r($equipement);
 
+ affichagevoiture
     $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = 
     CASE 
         WHEN `ID` = :id1 THEN :equip1
@@ -219,6 +222,18 @@ class pdoGarage {
         WHEN `ID` = :id10 THEN :equip10
     END
     WHERE `ID` IN (:id1, :id2, :id3, :id4, :id5, :id6, :id7, :id8, :id9, :id10);";
+
+    $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip10 WHERE `EQUIPEMENTS`.`ID` = $equipement[0]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip1 WHERE `EQUIPEMENTS`.`ID` = $equipement[1]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip2 WHERE `EQUIPEMENTS`.`ID` = $equipement[2]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip3 WHERE `EQUIPEMENTS`.`ID` = $equipement[3]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip4 WHERE `EQUIPEMENTS`.`ID` = $equipement[4]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip5 WHERE `EQUIPEMENTS`.`ID` = $equipement[5]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip6 WHERE `EQUIPEMENTS`.`ID` = $equipement[6]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip7 WHERE `EQUIPEMENTS`.`ID` = $equipement[7]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip8 WHERE `EQUIPEMENTS`.`ID` = $equipement[8]['ID']; 
+    UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip9 WHERE `EQUIPEMENTS`.`ID` = $equipement[9]['ID'];";
+ main
 
     $prepa = self::$monPdo->prepare($request);
 
@@ -253,16 +268,24 @@ class pdoGarage {
     return $result;
   }
 
->>>>>>> Stashed changes
+ affichagevoiture
+ Stashed changes
+ main
   public static function getVoiture($id){
-    $request = "SELECT* FROM VOITURES WHERE ID = $id";
+    $request = "SELECT * FROM VOITURES WHERE ID = $id";
     $prepa = self::$monPdo->prepare($request);
     $prepa->execute();
     $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
-    return $result[0];
-    
+    return $result;
   }
+
+  public static function getEquipement($id){
+    $request = "SELECT * FROM EQUIPEMENTS WHERE VOITURE_ID = $id";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+    return $result;
+  }
+
 }
-
-
 ?>
