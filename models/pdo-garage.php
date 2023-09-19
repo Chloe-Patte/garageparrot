@@ -175,7 +175,46 @@ class pdoGarage {
     return $result;
   }
 
-  public static function updateVoiture($id, $marque, $modele, $annee, $energie, $trans, $prix, $motor, $km, $porte, $place, $couleur, $cvfisc, $cvdin, $equip1, $equip2, $equip3, $equip4, $equip5, $equip6, $equip7, $equip8, $equip9, $equip10){
+  public static function updateVoiture($id, $marque, $modele, $annee, $energie, $trans, $prix, $motor, $km, $porte, $place, $couleur, $cvfisc, $cvdin, $equipements) {
+    $connexionGarage = pdoGarage::getPdoGarage();
+
+    // Mettre à jour les données de la voiture
+    $request = "UPDATE `VOITURES` SET `MARQUE` = :marque, `MODELE` = :modele, `ANNEE` = :annee, `ENERGIE` = :energie, `TRANSMISSION` = :trans, `MOTORISATION` = :motor, `PRIX` = :prix, `KILOMETRAGE` = :km, `PORTES` = :porte, `PLACES` = :place, `COULEUR` = :couleur, `CVFISC` = :cvfisc, `CVR` = :cvdin WHERE `VOITURES`.`ID` = :id;";
+    $prepa = self::$monPdo->prepare($request);
+
+    $prepa->bindValue(':marque', $marque);
+    $prepa->bindValue(':modele', $modele);
+    $prepa->bindValue(':annee', $annee);
+    $prepa->bindValue(':energie', $energie);
+    $prepa->bindValue(':trans', $trans);
+    $prepa->bindValue(':motor', $motor);
+    $prepa->bindValue(':prix', $prix);
+    $prepa->bindValue(':km', $km);
+    $prepa->bindValue(':porte', $porte);
+    $prepa->bindValue(':place', $place);
+    $prepa->bindValue(':couleur', $couleur);
+    $prepa->bindValue(':cvfisc', $cvfisc);
+    $prepa->bindValue(':cvdin', $cvdin);
+    $prepa->bindValue(':id', $id);
+
+    $prepa->execute();
+
+    // Mettre à jour les équipements de la voiture
+   $equipement = $connexionGarage->getEquipement($id);
+
+
+    foreach ($equipements as $key => $value) {
+        $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :libelle WHERE `ID` = :equip_id;";
+        $prepa = self::$monPdo->prepare($request);
+        $prepa->bindValue(':libelle', $value);
+        $prepa->bindValue(':equip_id', $key);
+        $prepa->execute();
+    }
+
+    return true; // Si tout s'est bien passé
+}
+
+  /*public static function updateVoiture($id, $marque, $modele, $annee, $energie, $trans, $prix, $motor, $km, $porte, $place, $couleur, $cvfisc, $cvdin, $equip1, $equip2, $equip3, $equip4, $equip5, $equip6, $equip7, $equip8, $equip9, $equip10){
     $connexionGarage = pdoGarage::getPdoGarage();
 
     $request = "UPDATE `VOITURES` SET `MARQUE` = :marque, `MODELE` = :modele, `ANNEE` = :annee, `ENERGIE` = :energie, `TRANSMISSION` = :trans, `MOTORISATION` = :motor, `PRIX` = :prix, `KILOMETRAGE` = :km, `PORTES` = :porte, `PLACES` = :place, `COULEUR` = :couleur, `CVFISC` = :cvfisc, `CVR` = :cvdin WHERE `VOITURES`.`ID` = :id;";
@@ -200,7 +239,7 @@ class pdoGarage {
 
     $result = $prepa-> rowCount();
 
-    $equipement = $connexionGarage->getEquipement($id);
+    
 
 
     
@@ -252,7 +291,7 @@ class pdoGarage {
       return $result;
 
     
-  }
+  }*/
 
   public static function deleteVoiture($id){
     $request = "DELETE FROM EQUIPEMENTS WHERE VOITURE_ID='".$id."'";
@@ -278,9 +317,6 @@ class pdoGarage {
     return $result[0];
     
   }
-}
-
-
 
   public static function getHoraires() {
     $request = "SELECT * FROM HORAIRES";
@@ -289,6 +325,6 @@ class pdoGarage {
     $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
   }
-}
 
+}
 ?>
