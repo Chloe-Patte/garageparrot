@@ -1,11 +1,11 @@
-<div class="container mx-auto pt-16"> 
+<div class="container mx-auto pt-16 pb-8"> 
   <div class="pb-12">
     <h2 class="text-2xl xl:text-4xl font-bold text-gray-900 mx-auto text-center xl:text-left pb-4">Commentaires de nos clients</h1>
     <p class="text-xl text-gray-600 xl:w-3/4 w-11/12 mx-auto xl:mx-0 text-center sm:text-left">
       Vous pouvez, vous aussi, nous laisser un commentaire<a class="text-clifford" href="index.php?controleur=gestionvisiteur&action=consultercomment"> en cliquant ici.</a></p>
   </div>
    
-  <section id="carousel">
+  <section id="carousel ">
      
     <figure class="visible">
     
@@ -19,7 +19,9 @@
                 <p class="text-xl text-white pb-1"><?php echo $commentaire['PRENOM'].' '.$commentaire['NOM']?></p>
                 <p class="text-base text-gray-200"><?php echo $commentaire['MOTIF']?></p>
               </div>
-              <div class="flex items-center space-x-1" id="note" name="note"<?php echo$commentaire['NOTE'] ?>>
+              <p class="text-base text-center py-4"><?php echo $commentaire['NOTE']?>/5</p>
+
+              <!--<div class="flex items-center space-x-1" id="note" name="note"<?php echo$commentaire['NOTE'] ?>>
                 <svg id="star-1" data-id="1" class="star" value=1 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                 </svg>
@@ -35,7 +37,7 @@
                 <svg id="star-5" data-id="5" class="star" value=5 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
                     <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
                 </svg>
-            </div>
+            </div>-->
               <div class="pl-6 pr-6 pt-10 relative h-64">
                 <p class="text-base text-gray-600 leading-8"><?php echo $commentaire['MESSAGE'] ?></p>
                   <div class="flex justify-end mt-2">
@@ -57,24 +59,5 @@
     </figure>
     
 </section>
-    <div class="cursor-pointer flex justify-center pt-4 pb-8 sm:pt-8 md:pt-8 lg:pt-8 xl:pt-12">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="movePrev()">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <polyline points="15 6 9 12 15 18" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="moveForward()">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <polyline points="9 6 15 12 9 18" />
-      </svg>
-    </div>
+    
 </div>
-
-<style>
-  section#carousel > figure > div {
-    display: none;
-  }
-  section#carousel > figure.visible > div {
-    display: flex;
-    position: relative;
-  }
-</style>
