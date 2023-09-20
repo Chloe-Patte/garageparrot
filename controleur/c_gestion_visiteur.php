@@ -33,6 +33,24 @@
         include('./vues/formulaire-contact.php');
         break;
       }
+
+      case 'consulterfcv':
+        {
+          $voitureComment = $connexionGarage->getVoitureComment($_REQUEST['marque'], $_REQUEST['modele'], $_REQUEST['annee']);
+          $marque = $_REQUEST['marque'];
+          $modele = $_REQUEST['modele'];
+          $annee = $_REQUEST['annee'];
+
+          $voitureInfo = array(
+            'marque' => $marque,
+            'modele' => $modele,
+            'annee' => $annee
+        );
+
+          include('./vues/formcontactvoiture.php');
+          break;
+        }
+
     case 'consultercomment':
       {
         include('./vues/comentary.php');
@@ -50,6 +68,7 @@
         include('./vues/footer.php');
         break;
       }
+      
 
     default:
       {

@@ -1,10 +1,10 @@
 <div class="w-20 h-20 ml-6 mt-2">
-      <a href="index.php"> <img src="images/Garage V.Parrot.png"></a>
+      <a href="index.php"> <img src="images/Garage V.Parrot.png"></a> 
 </div>
 <section class="bg-white">
     <div class="py-4 lg:py-1 px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Laissez-nous un commentaire</h2>
-        <p class="mb-8 lg:mb-12 font-light text-center text-gray-500 sm:text-xl">Vous avez besoin d'informations complémentaires concernant le garage, nos services ou une des voitures disponible à la vente ? Faites-le nous savoir.</p>
+        <p class="mb-8 lg:mb-12 font-light text-center text-gray-500 sm:text-xl">Vous souhaitez partager votre expérience, nous serons ravis de lire votre commentaire</p>
         <form method="post" action="index.php?controleur=gestionadmin&action=sauvegardercommentaire" class="space-y-8">
             <div>
                 <label for="motif" class="block mb-2 text-sm text-left font-medium text-gray-900">Votre dernière visite</label>
@@ -61,7 +61,7 @@
                             }
                         }
 
-                        note.value = starId; // Utilisez la propriété 'value' pour définir la valeur de l'input
+                        note.value = starId;
                     });
                 });
             </script>

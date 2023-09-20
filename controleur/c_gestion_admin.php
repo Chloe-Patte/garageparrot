@@ -330,7 +330,7 @@
               }
             }
     
-    case 'updategoraires':
+    case 'updatehoraires':
       {
         
       }
