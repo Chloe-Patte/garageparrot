@@ -310,12 +310,29 @@
       }
 
     case 'formmodifierhoraires':
+        {
+            if(isset($_POST['id'])){
+                $idHoraire = $_POST['id'];
+                $horaire = $connexionGarage->getHoraireById($idHoraire);
+                
+                if($horaire !== false){
+                    ?><div class="inline-flex"><?php
+                    include('vues/dashboard/dashboard.php');
+                    include('vues/dashboard/updatehoraires.php');
+                    ?></div><?php
+                } else {
+                  ?><div class="inline-flex"><?php
+                  include('vues/dashboard/dashboard.php');
+                  include('vues/dashboard/horaires.php');
+                  ?></div><?php
+                }
+            break;
+              }
+            }
+    
+    case 'updategoraires':
       {
-        ?><div class="inline-flex"><?php
-          include('vues/dashboard/dashboard.php');
-          include('vues/dashboard/updatehoraires.php');
-          ?></div><?php
-        break;
+        
       }
 
     case 'logout':

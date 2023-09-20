@@ -175,7 +175,8 @@ class pdoGarage {
     return $result;
   }
 
-  public static function updateVoiture($id, $marque, $modele, $annee, $energie, $trans, $prix, $motor, $km, $porte, $place, $couleur, $cvfisc, $cvdin, $equipements) {
+  public static function updateVoiture($id, $marque, $modele, $annee, $energie, $trans, $prix, $motor, $km, $porte, $place, $couleur, $cvfisc, $cvdin, $equipements) 
+  {
     $connexionGarage = pdoGarage::getPdoGarage();
 
     // Mettre à jour les données de la voiture
@@ -238,9 +239,6 @@ class pdoGarage {
     $prepa->execute();
 
     $result = $prepa-> rowCount();
-
-    
-
 
     
    $request = "UPDATE `EQUIPEMENTS` SET `LIBELLE` = :equip10 WHERE `EQUIPEMENTS`.`ID` = $equipement[0]['ID']; 
@@ -325,6 +323,35 @@ class pdoGarage {
     $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
   }
+
+  public static function getHoraireById($id) {
+    $request = "SELECT * FROM HORAIRES WHERE ID = :id";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->bindValue(':id', $id);
+    $prepa->execute();
+    $result = $prepa->fetch(\PDO::FETCH_ASSOC);
+    return $result;
+}
+
+public static function updatehoraires($matin, $apresmidi)
+    {
+      $connexionGarage = pdoGarage::getPdoGarage();
+            // Récupération des données du formulaire
+            $id = $_POST['id'];
+            $matin = $_POST['matin'];
+            $apresmidi = $_POST['apresmidi'];
+
+            // Mise à jour de la base de données
+            $request = "UPDATE horaires SET matin = :matin, apresmidi = :apresmidi WHERE id = :id";
+            $prepa = self::$monPdo->prepare($request);
+            $prepa->bindParam(':matin', $matin);
+            $prepa->bindParam(':apresmidi', $apresmidi);
+            $prepa->bindParam(':id', $id);
+            $prepa->execute();
+            $result = $prepa->fetch(\PDO::FETCH_ASSOC);
+            return $result;
+        
+    }
 
 }
 ?>

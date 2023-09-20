@@ -4,7 +4,7 @@
   <div class="flex flex-wrap mb:20 sm:px-8 md:px-12 pt-8">
     <div class="w-full md:w-1/2 lg:w-2/6 px-4 text-center md:text-left lg:text-left">
       <h2 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-2xl xl:text-2xl md:ml-20 xl:ml-24">
-        <?php echo $voiture['MARQUE'].' '.$voiture['MODELE']?>
+        <?php echo $voiture['MARQUE'].' '.$voiture['MODELE']?> 
       </h2>
       <h3 class="font-medium text-gray-600 text-medium md:text-xl lg:text-xl xl:text-xl md:ml-20 xl:ml-24">
         <?php echo $voiture['MOTORISATION'] ?>
@@ -114,7 +114,7 @@
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Places</p>
-          <?php echo $voiture[0]['PLACES'] ?>
+          <?php echo $voiture['PLACES'] ?>
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Couleur</p>
@@ -124,7 +124,7 @@
         <div class="grid grid-cols-2">
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Portes</p>
-          <?php echo $voiture[0]['PORTES'] ?>
+          <?php echo $voiture['PORTES'] ?>
         </li>
         </div>
       </ul>
