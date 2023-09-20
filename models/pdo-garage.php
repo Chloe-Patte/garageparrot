@@ -361,8 +361,16 @@ class pdoGarage {
     $prepa->execute();
     $result = $prepa->fetchAll(PDO::FETCH_ASSOC);
     return $result;
-}  
+  }  
 
+  public static function getVoituresByParam($prixMin, $prixMax, $anneeMin, $anneeMax, $kmMin, $kmMax){
+    $request = "SELECT * FROM `VOITURES` WHERE ((PRIX BETWEEN $prixMin AND $prixMax) && (KILOMETRAGE BETWEEN $kmMin AND $kmMax) && (ANNEE BETWEEN $anneeMin AND $anneeMax));";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+    return $result;
   }
+
+}
 
 ?>

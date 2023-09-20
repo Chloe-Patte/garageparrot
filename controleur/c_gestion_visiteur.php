@@ -6,11 +6,9 @@
   switch($action){
     case 'consultervo':
       {
-        if(is_array($connexionGarage->getVoitures())){
-          $lesVoitures = $connexionGarage->getVoitures();
-        }else {
-          $lesVoitures = [];
-        }
+        $lesVoitures = $connexionGarage->getVoitures();
+        //$lesVoitures = json_encode($lesVoitures);
+        
 
         $lesHoraires = $connexionGarage->getHoraires();
 
@@ -109,6 +107,18 @@
         include('./vues/footer.php');
         break;
       }
+    
+    case 'majstock':{
+      $lesVoitures = $connexionGarage->getVoituresByParam($_POST['prixMin'], $_POST['prixMax'], $_POST['anneeMin'], $_POST['anneeMax'], $_POST['kmMin'], $_POST['kmMax']);
+      //$lesVoitures = json_encode($lesVoitures);      
+
+      $lesHoraires = $connexionGarage->getHoraires();
+
+      include('vues/header.php');
+      include('vues/vehicules_occasion.php');
+      include('./vues/footer.php');
+      break;
+    }
       
     default:
       {
