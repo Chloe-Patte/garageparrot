@@ -13,7 +13,7 @@
                     <a class="hover:text-clifford" href="index.php?controleur=gestionvisiteur&action=consulterfdc"><i class="lni lni-envelope"></i><i class="fa-solid fa-envelope" style="color: #1f2937"></i> Contactez-nous</a>
                 </li>
             </ul>
-        </div>
+        </div> 
         
         <div class="p-5 sm:w-7/12 border-r text-center">
             <h3 class="font-bold text-xl text-clifford mb-4">Nos horaires</h3>
