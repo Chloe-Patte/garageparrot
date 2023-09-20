@@ -5,7 +5,7 @@
   <div class="py-4 lg:py-1 px-4 mx-auto max-w-screen-md">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contactez-nous</h2>
       <p class="mb-8 lg:mb-12 font-light text-center text-gray-500 sm:text-xl">Vous avez besoin d'informations complémentaires concernant le véhicule <?php echo $voitureInfo['marque'].' '.$voitureInfo['modele'].' ' .$voitureInfo['annee'] ?> ? Faites-le nous savoir.</p>
-      <form action="#" class="space-y-8">
+      <form action="index.php?controleur=gestionvisiteur&action=envoyermail" class="space-y-8">
           <div>
               <label for="subject" class="block mb-2 text-sm text-left font-medium text-gray-900">Sujet</label>
               <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" value= "<?php echo $voitureInfo['marque'].' ' .$voitureInfo['modele'].' ' .$voitureInfo['annee'] ?>">

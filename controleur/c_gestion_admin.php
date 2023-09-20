@@ -105,7 +105,6 @@
 
     case 'commentaire':
       {
-        
         if(is_array($connexionGarage->getCommentaires())){
           $lesCommentaires = $connexionGarage->getCommentaires();
         }else {

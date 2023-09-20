@@ -34,22 +34,32 @@
         break;
       }
 
-      case 'consulterfcv':
-        {
-          $voitureComment = $connexionGarage->getVoitureComment($_REQUEST['marque'], $_REQUEST['modele'], $_REQUEST['annee']);
-          $marque = $_REQUEST['marque'];
-          $modele = $_REQUEST['modele'];
-          $annee = $_REQUEST['annee'];
+    case 'consulterfcv':
+      {
+        $voitureComment = $connexionGarage->getVoitureComment($_REQUEST['marque'], $_REQUEST['modele'], $_REQUEST['annee']);
+        $marque = $_REQUEST['marque'];
+        $modele = $_REQUEST['modele'];
+        $annee = $_REQUEST['annee'];
 
-          $voitureInfo = array(
-            'marque' => $marque,
-            'modele' => $modele,
-            'annee' => $annee
+        $voitureInfo = array(
+          'marque' => $marque,
+          'modele' => $modele,
+          'annee' => $annee
         );
 
-          include('./vues/formcontactvoiture.php');
-          break;
-        }
+        include('./vues/formcontactvoiture.php');
+        break;
+      }
+
+    case 'envoyermail' :
+      {
+        $to = 'patte.chloe.cp@gmail.com';
+        $subject = 'test';
+        $message = $_POST['message'];
+        mail ($to, $subject, $message);
+        print_r(mail($to,$subject,$message));
+        
+      }
 
     case 'consultercomment':
       {
@@ -69,7 +79,6 @@
         break;
       }
       
-
     default:
       {
         $lesHoraires = $connexionGarage->getHoraires();
