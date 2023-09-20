@@ -46,17 +46,22 @@
 
     switch($controleur){
       case 'accueil':
-        {include('./vues/header.php');
+        {
+          $lesHoraires = $connexionGarage->getHoraires();
+
+          include('./vues/header.php');
           include('./vues/slider-accueil.php');
           include('./vues/cards.php');
           include('./vues/testimonials.php');
           include('./vues/footer.php');
           break;}
       case 'gestionvisiteur':
-        {include('./controleur/c_gestion_visiteur.php');
+        {
+          include('./controleur/c_gestion_visiteur.php');
           break;}
       case 'gestionadmin':
-        {include('./controleur/c_gestion_admin.php');
+        {
+          include('./controleur/c_gestion_admin.php');
           break;}
     }
   ?>

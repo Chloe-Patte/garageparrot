@@ -16,17 +16,17 @@
         </div>
         
         <div class="p-5 sm:w-7/12 border-r text-center">
-          <h3 class="font-bold text-xl text-clifford mb-4">Nos horaires</h3>
-          <ul>
-            <li>Lundi : 10h-12h/14h-19h</li>
-            <li>Mardi : 8h-12h/14h-19h</li>
-            <li>Mercredi : 8h-12h/14h-19h</li>
-            <li>Jeudi : 8h-12h/14h-19h</li>
-            <li>Vendredi : 8h-12h/14h-19h</li>
-            <li>Samedi : 8h-12h/14h-18h</li>
-            <li>Dimanche : fermé</li>
-          </ul>    
+            <h3 class="font-bold text-xl text-clifford mb-4">Nos horaires</h3>
+            <ul>
+                <?php
+                    foreach ($lesHoraires as $horaires => $valeur) {
+                        echo "<li>".$valeur[JOUR]." : ".$valeur[MATIN]."/".$valeur[APRESMIDI]."</li>";
+                    };
+                ?>
+                
+            </ul>    
         </div>
+        
         <div class="p-5 sm:w-3/12 ">
             <div class="text-sm uppercase text-clifford font-bold">Menu</div>
             <ul>

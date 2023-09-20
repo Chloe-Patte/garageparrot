@@ -11,6 +11,9 @@
         }else {
           $lesVoitures = [];
         }
+
+        $lesHoraires = $connexionGarage->getHoraires();
+
         include('vues/header.php');
         include('vues/vehicules_occasion.php');
         include('./vues/footer.php');
@@ -18,6 +21,8 @@
       }
     case 'consulterqsn':
       {
+        $lesHoraires = $connexionGarage->getHoraires();
+
         include('./vues/header.php');
         include('./vues/qui_sommes_nous.php');
         include('./vues/footer.php');
@@ -36,6 +41,8 @@
 
     case 'consultervoitures':
       {
+        $lesHoraires = $connexionGarage->getHoraires();
+
         $voiture = $connexionGarage->getVoiture($_REQUEST['id']);
         $equipements = $connexionGarage->getEquipement($_REQUEST['id']);
         include('./vues/header.php');
@@ -46,7 +53,10 @@
       }
 
     default:
-      {include('vues/header.php');
+      {
+        $lesHoraires = $connexionGarage->getHoraires();
+
+        include('vues/header.php');
         include('vues/footer.php');
         break;}
   }
