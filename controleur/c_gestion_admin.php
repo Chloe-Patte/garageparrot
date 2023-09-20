@@ -345,6 +345,16 @@
 
     
 
+    case 'logout':
+      {
+        session_destroy();
+        include('vues/connexion-admin.php');
+        break;
+      }
+
+
+    
+
     }
 
 ?>
