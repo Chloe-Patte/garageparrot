@@ -20,7 +20,7 @@
             <ul>
                 <?php
                     foreach ($lesHoraires as $horaires => $valeur) {
-                        echo "<li>".$valeur[JOUR]." : ".$valeur[MATIN]."/".$valeur[APRESMIDI]."</li>";
+                        echo "<li>".$valeur['JOUR']." : ".$valeur['MATIN']."/".$valeur['APRESMIDI']."</li>";
                     };
                 ?>
                 
