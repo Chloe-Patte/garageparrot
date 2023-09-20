@@ -51,16 +51,66 @@
         break;
       }
 
-    case 'envoyermail' :
+    case 'envoyermail':
       {
         $to = 'patte.chloe.cp@gmail.com';
         $subject = 'test';
-        $message = $_POST['message'];
-        mail ($to, $subject, $message);
-        print_r(mail($to,$subject,$message));
+        $message = "coucou" . $_POST['message'];
+        $headers =  'From: noreply@parrot.fr' . "\r\n" .
+                    'Reply-To: noreply@parrot.fr' . "\r\n" .
+                    'Content-Type: text/plain; charset=UTF-8' . "\r\n";
         
+        if (mail($to, $subject, $message, $headers)) {
+            echo "E-mail envoyé avec succès";
+        } else {
+            echo "Échec de l'envoi de l'e-mail";
+        }
+        
+        include('./vues/formcontactvoiture.php');
+        break;
       }
 
+    case 'sendmail':{
+      // Multiple recipients
+      $to = 'patte.chloe.cp@gmail.com'; // note the comma
+
+      // Subject
+      $subject = $_POST['subject'];
+
+      // Message
+      $message = "
+      <html>
+      <head>
+        <title>".$_POST['subject']."</title>
+      </head>
+      <body>
+        <p>Sujet : ".$_POST['message']."</p>
+        <p>Nom : ".$_POST['message']."</p>
+        <p>Prénom : ".$_POST['message']."</p>
+        <p>Mail : ".$_POST['message']."</p>
+        <p>Tel : ".$_POST['message']."</p>
+        <p>Message : ".$_POST['message']."</p>
+
+      </body>
+      </html>
+      ";
+
+      // To send HTML mail, the Content-type header must be set
+      $headers[] = 'MIME-Version: 1.0';
+      $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+      // Additional headers
+      $headers[] = 'From: Birthday Reminder <noreply@vparrot.com>';
+
+      if (mail($to, $subject, $message, implode("\r\n", $headers))) {
+          echo "E-mail envoyé avec succès";
+      } else {
+          echo "Échec de l'envoi de l'e-mail";
+      }
+      
+      include('./vues/formcontactvoiture.php');
+      break;
+    }
     case 'consultercomment':
       {
         include('./vues/comentary.php');
