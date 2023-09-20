@@ -51,25 +51,6 @@
         break;
       }
 
-    case 'envoyermail':
-      {
-        $to = 'patte.chloe.cp@gmail.com';
-        $subject = 'test';
-        $message = "coucou" . $_POST['message'];
-        $headers =  'From: noreply@parrot.fr' . "\r\n" .
-                    'Reply-To: noreply@parrot.fr' . "\r\n" .
-                    'Content-Type: text/plain; charset=UTF-8' . "\r\n";
-        
-        if (mail($to, $subject, $message, $headers)) {
-            echo "E-mail envoyé avec succès";
-        } else {
-            echo "Échec de l'envoi de l'e-mail";
-        }
-        
-        include('./vues/formcontactvoiture.php');
-        break;
-      }
-
     case 'sendmail':{
       // Multiple recipients
       $to = 'patte.chloe.cp@gmail.com'; // note the comma
