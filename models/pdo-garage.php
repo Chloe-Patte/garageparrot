@@ -299,8 +299,6 @@ class pdoGarage {
     return $result;
   }
 
-  
-
 
   public static function getHoraires() {
     $request = "SELECT * FROM HORAIRES";
@@ -363,8 +361,8 @@ class pdoGarage {
     $prepa->execute();
     $result = $prepa->fetchAll(PDO::FETCH_ASSOC);
     return $result;
-}
-  
+}  
+
   }
 
 ?>
