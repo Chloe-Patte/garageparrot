@@ -24,8 +24,8 @@
       
     </div>
     <div class="hidden lg:block lg:w-1/3">
-      <a class="md:hidden-block text-white py-3 px-5 ml-6 mr-10 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-      href="index.php?controleur=gestionvisiteur&action=consulterfdc">
+    <?php echo "<a class=\"md:hidden-block text-white py-3 px-5 ml-6 mr-10 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300\" href=\"index.php?controleur=gestionvisiteur&action=consulterfcv&marque=" . $voiture['MARQUE'] . "&modele= " . $voiture['MODELE'] . "&annee=" . $voiture['ANNEE'] . "\">"; ?>
+
         <i class="lni lni-envelope"></i><i class="fa-solid fa-envelope" style="color: #ffffff"></i> 
         Contactez-nous
       </a>

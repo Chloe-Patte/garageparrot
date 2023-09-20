@@ -299,14 +299,7 @@ class pdoGarage {
     return $result;
   }
 
-  public static function getVoiture($id){
-    $request = "SELECT* FROM VOITURES WHERE ID = $id";
-    $prepa = self::$monPdo->prepare($request);
-    $prepa->execute();
-    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
-    return $result[0];
-    
-  }
+  
 
 
   public static function getHoraires() {
@@ -326,7 +319,7 @@ class pdoGarage {
     return $result;
 }
 
-public static function updatehoraires($matin, $apresmidi)
+  public static function updatehoraires($matin, $apresmidi)
     {
       $connexionGarage = pdoGarage::getPdoGarage();
             // Récupération des données du formulaire
@@ -346,5 +339,32 @@ public static function updatehoraires($matin, $apresmidi)
         
     }
 
+    public static function getCommentaire(){
+      $request = "SELECT * FROM COMMENTAIRES LIMIT 3";
+      $prepa = self::$monPdo->prepare($request);
+      $prepa->execute();
+      $result = $prepa->fetchAll();
+      return $result;
+    }
+    public static function getVoiture($id){
+    $request = "SELECT* FROM VOITURES WHERE ID = $id";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->execute();
+    $result = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+    return $result[0];
+    
+  }
+  public static function getVoitureComment($marque, $modele, $annee){
+    $request = "SELECT * FROM VOITURES WHERE MARQUE = :marque AND MODELE = :modele AND ANNEE = :annee";
+    $prepa = self::$monPdo->prepare($request);
+    $prepa->bindValue(':marque', $marque, PDO::PARAM_STR);
+    $prepa->bindValue(':modele', $modele, PDO::PARAM_STR);
+    $prepa->bindValue(':annee', $annee, PDO::PARAM_STR);
+    $prepa->execute();
+    $result = $prepa->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
 }
+  
+  }
+
 ?>

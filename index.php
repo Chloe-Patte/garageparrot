@@ -48,7 +48,11 @@
       case 'accueil':
         {
           $lesHoraires = $connexionGarage->getHoraires();
-
+          if(is_array($connexionGarage->getCommentaire())){
+            $lesCommentaires = $connexionGarage->getCommentaire();
+          }else {
+            $lesCommentaires = [];
+          }
           include('./vues/header.php');
           include('./vues/slider-accueil.php');
           include('./vues/cards.php');
@@ -65,5 +69,5 @@
           break;}
     }
   ?>
-
+ 
 </html>
