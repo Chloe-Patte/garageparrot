@@ -135,29 +135,27 @@ VALUES (NULL, 'Mercedes', 'Vito', '2019', 'Diesel', 'Manuelle', '144 DCI', '5200
 
 SET @dernier_id_voiture_mercedes = LAST_INSERT_ID();
 
-INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
-VALUES (NULL, 'Climatisation manuelle, Douche, Toit relevable, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto', @dernier_id_voiture_mercedes);
+INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES 
+(NULL, 'Climatisation manuelle', @dernier_id_voiture_mercedes),
+(NULL, 'Douche', @dernier_id_voiture_mercedes),
+(NULL, 'Toit relevable', @dernier_id_voiture_mercedes),
+(NULL, 'Caméra de recul', @dernier_id_voiture_mercedes),
+(NULL, 'Bluetooth', @dernier_id_voiture_mercedes),
+(NULL, 'Apple CarPlay', @dernier_id_voiture_mercedes),
+(NULL, 'Android Auto', @dernier_id_voiture_mercedes);
 
 INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Van', @dernier_id_voiture_mercedes);
 
 INSERT INTO `IMAGES` (`ID`, `URL`, `VOITURE_ID`)
-VALUES (NULL, LOAD_FILE('./images/voiture1.png'), @dernier_id_voiture_mercedes );
+VALUES (NULL, ('./images/mercedes-vito-blanc/avant'), @dernier_id_voiture_mercedes );
 
 
 -- Répétez le processus pour la voiture Kia
 INSERT INTO `VOITURES` (`ID`, `MARQUE`, `MODELE`, `ANNEE`, `ENERGIE`, `TRANSMISSION`, `MOTORISATION`, `PRIX`, `KILOMETRAGE`, `PORTES`, `PLACES`, `COULEUR`, `CVFISC`, `CVR`)
 VALUES (NULL, 'Kia', 'Niro EV', '2023', 'Electrique', 'Automatique', '150 kwh', '45640', '5890', '5', '5', 'Blanc', '4', '204');
 
--- Récupérez l'ID de la voiture Kia que vous venez d'insérer
 SET @dernier_id_voiture_kia = LAST_INSERT_ID();
-
--- Insérez les équipements pour la voiture Kia en utilisant l'ID récupéré
-INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`)
-VALUES (NULL, 'Climatisation automatique bi-zone, Caméra de recul, Bluetooth, Apple CarPlay, Android Auto, Limiteur & régulateur de vitesse adaptatif, Commandes au volant, Lane Assist', @dernier_id_voiture_kia);
-
-
-
 
 INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES 
 (NULL, 'Climatisation automatique bi-zone', @dernier_id_voiture_kia),
@@ -371,6 +369,8 @@ INSERT INTO `EQUIPEMENTS` (`ID`, `LIBELLE`, `VOITURE_ID`) VALUES
 
 INSERT INTO `TYPES_VEHICULES` (`ID`, `LIBELLE`, `VOITURE_ID`)
 VALUES (NULL, 'Citadine', @dernier_id_voiture_volkswagen);
+
+
 -- Requête
 
 

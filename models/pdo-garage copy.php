@@ -5,7 +5,7 @@ class pdoGarage {
   private static $monPdoGarage;
 
   private function __construct(){
-    self::$monPdo = new PDO ('mysql:host=storeplbdd.mysql.db;dbname=storeplbdd','storeplbdd','Krokmou14000');
+    self::$monPdo = new PDO ('mysql:host=localhost;dbname=GARAGEVPARROT','root','root');
     self::$monPdo->query("SET CHARACTER SET utf8");
   }
 

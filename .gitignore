@@ -1,0 +1,2 @@
+# Ignorer le fichier pdo-garage.php dans le dossier models
+models/pdo-garage.php
