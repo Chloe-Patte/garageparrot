@@ -117,24 +117,6 @@
 
         break;
       }
-
-    case 'sauvegardercommentaire':
-      {
-        $saveComment = $connexionGarage->saveComment($_POST['motif'], $_POST['nom'], $_POST['prenom'],$_POST['email'],$_POST['note'],$_POST['message']);
-
-        if(is_array($connexionGarage->getCommentaires())){
-          $lesCommentaires = $connexionGarage->getCommentaires();
-        }else {
-          $lesCommentaires = [];
-        }
-
-        ?><div class="inline-flex"><?php
-          include('vues/dashboard/dashboard.php');
-          include('vues/dashboard/commentaires.php')
-        ?></div><?php
-
-        break;
-      }
     
     case 'formaddcommentaire':
       {

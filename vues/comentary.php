@@ -5,7 +5,7 @@
     <div class="py-4 lg:py-1 px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Laissez-nous un commentaire</h2>
         <p class="mb-8 lg:mb-12 font-light text-center text-gray-500 sm:text-xl">Vous souhaitez partager votre expérience, nous serons ravis de lire votre commentaire</p>
-        <form method="post" action="index.php?controleur=gestionadmin&action=sauvegardercommentaire" class="space-y-8">
+        <form method="post" action="index.php?controleur=gestionvisiteur&action=sauvegardercommentaire" class="space-y-8">
             <div>
                 <label for="motif" class="block mb-2 text-sm text-left font-medium text-gray-900">Votre dernière visite</label>
                 <input type="text" id="motif" name="motif" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="Motif de votre visite">

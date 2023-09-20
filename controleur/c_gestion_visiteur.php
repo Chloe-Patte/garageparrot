@@ -90,6 +90,7 @@
       include('./vues/formcontactvoiture.php');
       break;
     }
+
     case 'consultercomment':
       {
         include('./vues/comentary.php');
@@ -117,6 +118,19 @@
       include('vues/header.php');
       include('vues/vehicules_occasion.php');
       include('./vues/footer.php');
+      break;
+    }
+
+    case 'sauvegardercommentaire':{
+      $saveComment = $connexionGarage->saveComment($_POST['motif'], $_POST['nom'], $_POST['prenom'],$_POST['email'],$_POST['note'],$_POST['message']);
+
+      if(is_array($connexionGarage->getCommentaires())){
+        $lesCommentaires = $connexionGarage->getCommentaires();
+      }else {
+        $lesCommentaires = [];
+      }
+
+      include('./vues/comentary.php');
       break;
     }
       
