@@ -19,8 +19,8 @@ git clone https://github.com/Chloe-Patte/garageparrot.git
 cd garageparrot
 ```
 
-## 🙇 Auteurr
-#### Saurabh Chauhan
+## 🙇 Auteur
+#### Chloé Patte
 - Github: [@Chloe-Patte](https://github.com/Chloe-Patte)
         
 
