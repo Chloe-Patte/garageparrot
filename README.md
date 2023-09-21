@@ -7,7 +7,7 @@ Ce site a été créé dans le cadre d'un projet scolaire en vue d'une évaluati
 - [PHP](https://www.php.net/docs.php)
 - [MySQLt](https://sql.sh/)
 - [Tailwind CSS](https://tailwindcss.com/)
-## 🛠️ Install Dependencies    
+## 🛠️ Exécution en local  
 Pour une exécution locale du site Garage V.Parrot suivez ces étapes :
 1. Cloner ce dépôt sur votre machine locale en utilisant la commande suivante :
 ```bash
