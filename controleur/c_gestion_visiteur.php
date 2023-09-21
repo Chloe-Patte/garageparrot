@@ -6,7 +6,11 @@
   switch($action){
     case 'consultervo':
       {
-        $lesVoitures = $connexionGarage->getVoitures();
+        if(is_array($connexionGarage->getVoitures())){
+          $lesVoitures = $connexionGarage->getVoitures();
+        }else {
+          $lesVoitures = [];
+        }
         //$lesVoitures = json_encode($lesVoitures);
         
 
@@ -101,7 +105,13 @@
       {
         $lesHoraires = $connexionGarage->getHoraires();
 
-        $voiture = $connexionGarage->getVoiture($_REQUEST['id']);
+        $voiture = $connexionGarage->getVoitureById($_REQUEST['id']);
+
+        if (!empty($voiture)) {
+            $lesVoitures = $voiture;
+        } else {
+            $lesVoitures = [];
+        }
         include('./vues/header.php');
         include('./vues/slider-voitures.php');
         include('./vues/voitures.php');

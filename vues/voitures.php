@@ -37,7 +37,7 @@
   <div class="flex flex-wrap px-8 md:px-16 lg:px-32 xl:px-32 pt-8">
     <div class="w-full md:w-1/2 lg:w-1/5 px-4 py-2 ">
       <div class="max-w-sm mx-auto py-6 rounded overflow-hidden shadow-lg bg-gray-100">
-        <i class="fa-solid fa-calendar fa-xl" style="color: #d22027;"></i>
+        <i class="fa-solid fa-calendar fa-xl inline-block align-middle" style="color: #d22027;"></i>
         <div>
           <div class="font-bold text-lg">Année</div>
           <p class="text-gray-700 text-base"> 
@@ -48,7 +48,7 @@
     </div>
     <div class="w-full md:w-1/2 lg:w-1/5 px-4 py-2 ">
       <div class="max-w-sm mx-auto py-6 rounded overflow-hidden shadow-lg bg-gray-100">
-      <i class="fa-solid fa-road fa-xl" style="color: #d22027;"></i>
+        <i class="fa-solid fa-road fa-xl" style="color: #d22027;"></i>
         <div>
           <div class="font-bold text-lg">Kilométrage</div>
           <p class="text-gray-700 text-base"> 

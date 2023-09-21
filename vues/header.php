@@ -1,8 +1,9 @@
-<nav class="sticky bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
+<nav class="sticky z-50 bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   
     <div class="w-16 h-16">
-      <a href="index.php"> <img src="<?php echo $image?>"></a>
+      <a href="index.php"> <img src="/home/storepl/www/img/garagevparrot.png" alt="Logo du site">
+</a>
     </div>
     <div class="flex md:order-2">
       <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
@@ -25,6 +26,5 @@
         </li>
       </ul>
     </div>
-  
   </div>
 </nav>

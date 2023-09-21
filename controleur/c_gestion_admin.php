@@ -99,8 +99,6 @@
           include('vues/dashboard/dashboard.php');
           include('vues/dashboard/employe.php')
         ?></div><?php
-        var_dump($add) ;
-
         break;
       } 
 

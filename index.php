@@ -23,13 +23,9 @@
     }
     </script>
 
-    <link rel="stylesheet" href="./style/flickity.css" media="screen">
-    <link rel="stylesheet" href="./style/slider.css">
     <link rel="stylesheet" href="./style/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0c39fbe230.js" crossorigin="anonymous"></script>
-    <script src="./scripts/flickity.js"></script>
-    <script src='./scripts/testimonials.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     
@@ -54,7 +50,6 @@
           }else {
             $lesCommentaires = [];
           }
-          $image = pdoGarage::getImageById(1);
           include('./vues/header.php');
           include('./vues/slider-accueil.php');
           include('./vues/cards.php');

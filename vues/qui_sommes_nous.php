@@ -22,7 +22,6 @@
 
 <section id="carousel">
 <!-- Card Entretien-->
-  <figure class="visible">
     <div class="pl-10 pr-10 md:pl-20 md:pr-20 p-5 bg-white">
       <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <h2 class="mb-2 font-bold text-2xl text-gray-600">Entretien</h2>
@@ -30,9 +29,7 @@
             Notre garage propose un large éventail de services d'entretien pour tous types de voitures de tourisme.</p>
       </div>
     </div>
-  </figure>
 <!-- Card Carosserie-->
-  <figure class="hidden">
     <div class="pl-10 pr-10 md:pl-20 md:pr-20 p-5 bg-white">
       <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <h2 class="mb-2 font-bold text-2xl text-gray-600">Carrosserie</h2>
@@ -40,9 +37,7 @@
             Notre garage propose un large éventail de services d'entretien pour tous types de voitures de tourisme.</p>
       </div>
     </div>
-  </figure>
 <!-- Card Mécanique-->
-  <figure class="hidden">
     <div class="pl-10 pr-10 md:pl-20 md:pr-20 p-5 bg-white">
       <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <h2 class="mb-2 font-bold text-2xl text-gray-600">Mécanique</h2>
@@ -52,9 +47,7 @@
           </p>
       </div>
     </div>
-  </figure>
 <!-- Card Occasion-->
-  <figure class="hidden">
     <div class="pl-10 pr-10 md:pl-20 md:pr-20 p-5 bg-white">
       <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-md">
         <h2 class="mb-2 font-bold text-2xl text-gray-600">Occasion</h2>
@@ -62,32 +55,4 @@
             Notre garage propose un large éventail de services d'entretien pour tous types de voitures de tourisme.</p>
       </div>
     </div>
-  </figure>
 </section>
-
-<!-- Flèche de navigation-->
-<div class="cursor-pointer flex justify-center pt-2 pb-8 sm:pt-4 md:pt-4 lg:pt-4 xl:pt-8">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="movePrev()">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <polyline points="15 6 9 12 15 18" />
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#CBD5E0" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="moveForward()">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <polyline points="9 6 15 12 9 18" />
-      </svg>
-</div>
-    
-<style>
-  section#carousel > figure > div {
-    display: none;
-  }
-  section#carousel > figure.visible > div {
-    display: flex;
-    position: relative;
-  }
-</style>
-
-
-
-
-</html>
