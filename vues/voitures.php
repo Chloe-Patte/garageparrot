@@ -1,6 +1,5 @@
 <div class="max-w-screen-lg mx-auto">
   <!-- div prix, marque, modèle, motorisation, contact-->
-  <?php $prix_formate = number_format($voiture['PRIX'], 0, ' '); ?>
   <div class="flex flex-wrap mb:20 sm:px-8 md:px-12 pt-8">
     <div class="w-full md:w-1/2 lg:w-2/6 px-4 text-center md:text-left lg:text-left">
       <h2 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-2xl xl:text-2xl md:ml-20 xl:ml-24">
@@ -12,7 +11,7 @@
     </div>
     <div class="w-full md:w-1/2 lg:w-2/6 px-4">
       <h2 class="font-bold text-clifford text-2xl md:text-2xl lg:text-3xl xl:text-3xl">
-      <?php echo $prix_formate . '€' ?>
+      <?php echo $voiture['PRIX'] . '€' ?>
       </h2>
       <div class="flex justify-center">
         <a class="lg:hidden block text-white py-3 px-5 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"

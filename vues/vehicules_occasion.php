@@ -4,27 +4,27 @@
       <h2 class="text-center font-bold text-2xl py-4">Rechercher</h2>
       <div class="grid gap-4 grid-cols-2 grid-rows-1">
         <div>
-          <label for="last name" class="block mb-2 text-sm text-left font-medium text-gray-900">Kilométrage min</label>
+          <label for="kmMin" class="block mb-2 text-sm text-left font-medium text-gray-900">Kilométrage min</label>
           <input type="text" id="kmMin" name="kmMin" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
         <div>
-          <label for="first name" class="block mb-2 text-sm text-left font-medium text-gray-900">Kilométrage max</label>
+          <label for="kmMax" class="block mb-2 text-sm text-left font-medium text-gray-900">Kilométrage max</label>
           <input type="text" id="kmMax" name="kmMax" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
         <div>
-          <label for="last name" class="block mb-2 text-sm text-left font-medium text-gray-900">Annee min</label>
+          <label for="anneeMin" class="block mb-2 text-sm text-left font-medium text-gray-900">Année min</label>
           <input type="text" id="anneeMin" name="anneeMin" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
         <div>
-          <label for="first name" class="block mb-2 text-sm text-left font-medium text-gray-900">Annee max</label>
+          <label for="anneeMax" class="block mb-2 text-sm text-left font-medium text-gray-900">Année max</label>
           <input type="text" id="anneeMax" name="anneeMax" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
         <div>
-          <label for="last name" class="block mb-2 text-sm text-left font-medium text-gray-900">Prix min</label>
+          <label for="prixMin" class="block mb-2 text-sm text-left font-medium text-gray-900">Prix min</label>
           <input type="text" id="prixMin" name="prixMin" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
         <div>
-          <label for="first name" class="block mb-2 text-sm text-left font-medium text-gray-900">Prix max</label>
+          <label for="prixMax" class="block mb-2 text-sm text-left font-medium text-gray-900">Prix max</label>
           <input type="text" id="prixMax" name="prixMax" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="" required>
         </div>
       </div>
@@ -36,14 +36,13 @@
   <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10 pt-10">
     <?php
       foreach($lesVoitures as $voiture){
-        $prix_formate = number_format($voiture['PRIX'], 0, ' ');
     ?>
       <div class="rounded overflow-hidden shadow-lg">
       <?php echo "<a href=\"index.php?controleur=gestionvisiteur&action=consultervoitures&id=" . $voiture['ID'] . "\">"; ?>
           <div class="relative">
-              <img class="w-full" src="./images/voiture2.png" alt="Voiture rouge des années 90">
+              <img class="w-full" src="./images/mercedes-vito-blanc/avant.png" alt="Voiture rouge des années 90">
                 <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-              <div class="absolute bottom-0 right-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out"><?php echo $prix_formate . '€' ?></div>
+              <div class="absolute bottom-0 right-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out"><?php echo $voiture['PRIX'] . '€' ?></div>
           </div>
           <div class="text-left px-6 py-4">
             <div class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"><?php echo $voiture['MARQUE'].' '.$voiture['MODELE']?></div>

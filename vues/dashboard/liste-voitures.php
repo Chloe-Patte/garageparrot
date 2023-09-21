@@ -13,13 +13,6 @@
                 </a>
               </div>
             </div>
-            <div class="text-center w-32 shadow-xl">
-              <div class="bg-blue-500 text-white p-2 rounded-tr-lg hover:bg-blue-700">
-                <a href="index.php?controleur=gestionadmin&action=formaddvoiture">
-                  Horaires
-                </a>
-              </div>
-            </div>
           </div>
           <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">                        
             <div class="overflow-x-auto">

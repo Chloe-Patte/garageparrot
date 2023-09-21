@@ -371,6 +371,10 @@ class pdoGarage {
     return $result;
   }
 
+  public static function getImageByID(){
+    
+  }
+
 }
 
 ?>

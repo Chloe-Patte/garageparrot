@@ -22,6 +22,7 @@
         }
     }
     </script>
+
     <link rel="stylesheet" href="./style/flickity.css" media="screen">
     <link rel="stylesheet" href="./style/slider.css">
     <link rel="stylesheet" href="./style/style.css">
@@ -53,6 +54,7 @@
           }else {
             $lesCommentaires = [];
           }
+          $image = pdoGarage::getImageById(1);
           include('./vues/header.php');
           include('./vues/slider-accueil.php');
           include('./vues/cards.php');
