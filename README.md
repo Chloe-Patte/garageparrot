@@ -1,5 +1,3 @@
-# garageparrot
- 
 # Garage V.Parrot🚗
 # <p align="center">Garage automobile à Toulouse</p>
   
