@@ -1,5 +1,5 @@
 <div class="w-20 h-20 ml-6 mt-2">
-  <a href= "index.php" > <?php echo $image[1] ?></a>
+  <a href= "index.php" > </a>
 </div>
 <div class="py-4 lg:py-1 px-4 mx-auto max-w-screen-md">
   <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">
