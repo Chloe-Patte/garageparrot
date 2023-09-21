@@ -6,8 +6,7 @@ CREATE TABLE IF NOT EXISTS EMPLOYES (
     PRENOM VARCHAR(32),
     EMAIL VARCHAR(128) UNIQUE NOT NULL,
     MDP VARCHAR(256) NOT NULL,
-    ADMINISTRATEUR BOOLEAN NOT NULL,
-    ROLE VARCHAR(32) NOT NULL
+    ADMINISTRATEUR BOOLEAN NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS VOITURES (
@@ -437,9 +436,11 @@ INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Vendr
 INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Samedi', '8h-12h', '14h-18h');
 INSERT INTO `HORAIRES` (`ID`, `JOUR`, `MATIN`, `APRESMIDI`) VALUES (NULL, 'Dimanche', 'Fermé', 'Fermé');
 
-
-INSERT INTO `EMPLOYES` (`ID`, `NOM`, `PRENOM`, `EMAIL`, `MDP`, `ADMINISTRATEUR`, `ROLE`) VALUES 
-(NULL, 'Michel', 'Jean', 'j.michel@garageparrot.fr', '$2y$10$FnrGsFdlozLf89/tCxKlDe0lGLrnQwkW2SSUae/EEbHIjB.CcZxfm', '', '');
+--Requêtes employés
+INSERT INTO `EMPLOYES` (`ID`, `NOM`, `PRENOM`, `EMAIL`, `MDP`, `ADMINISTRATEUR`) VALUES 
+(NULL, 'Parrot', 'Vincent', 'v.parrot@garageparrot.fr', '$2y$10$vmYhonSEEH2iuGyz8XsUnOJqsZQ8EAsKHB5Smd9PtzAFAe0TSM..6', '1');
+INSERT INTO `EMPLOYES` (`ID`, `NOM`, `PRENOM`, `EMAIL`, `MDP`, `ADMINISTRATEUR`, ) VALUES 
+(NULL, 'Michel', 'Jean', 'j.michel@garageparrot.fr', '$2y$10$FnrGsFdlozLf89/tCxKlDe0lGLrnQwkW2SSUae/EEbHIjB.CcZxfm', '');
 
 -- Requêtes images
 INSERT INTO `IMAGES` (`ID`, `URL`, `NOM`) VALUES 

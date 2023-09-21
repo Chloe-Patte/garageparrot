@@ -26,45 +26,8 @@
             </div>
             
             <label for="note" class="block text-sm text-left font-medium text-gray-900">Note</label>
-            <div class="flex items-center space-x-1" id="note" name="note">
-                <svg id="star-1" data-id="1" class="star" value=1 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg id="star-2" data-id="2" class="star" value=2 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg id="star-3" data-id="3" class="star" value=3 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg id="star-4" data-id="4" class="star" value=4 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-                <svg id="star-5" data-id="5" class="star" value=5 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
-                    <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
-                </svg>
-            </div>
-            <input name="note" type="hidden" value="0"/>
-            <script>
-                const stars = document.querySelectorAll('.star');
-                const note = document.querySelector('input[name="note"]');
-
-                stars.forEach(star => {
-                    star.addEventListener('click', () => {
-                        const starId = star.getAttribute('data-id');
-                        for (let i = 1; i <= 5; i++) {
-                            const currentStar = document.getElementById(`star-${i}`);
-                            if (i <= starId) {
-                                currentStar.classList.add('active');
-                                note.setAttribute = ('value', starId);
-                            } else {
-                                currentStar.classList.remove('active');
-                            }
-                        }
-
-                        note.value = starId;
-                    });
-                });
-            </script>
+            <input type="text" id="note" name="note" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="Note de 1 à 5" required>
+            
             <div class="sm:col-span-2">
                 <label for="message" class="block mb-2 text-sm text-left font-medium text-gray-900">Votre commentaire</label>
                 <textarea id="message" name="message" rows="6" required minlength="1" maxlength="150" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Écrivez votre commentaire ici. Maximum 150 caractères."></textarea>
