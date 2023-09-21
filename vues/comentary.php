@@ -1,5 +1,5 @@
 <div class="w-20 h-20 ml-6 mt-2">
-      <a href="index.php"> <img src="images/Garage V.Parrot.png"></a> 
+      <a href="index.php"> <img src="http://nunesaccount.alwaysdata.net/test/garagevparrot.png" alt="Logo du site"></a> 
 </div>
 <section class="bg-white">
     <div class="py-4 lg:py-1 px-4 mx-auto max-w-screen-md">

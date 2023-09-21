@@ -36,13 +36,14 @@
   <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10 pt-10">
     <?php
       foreach($lesVoitures as $voiture){
+        
     ?>
       <div class="rounded overflow-hidden shadow-lg">
       <?php echo "<a href=\"index.php?controleur=gestionvisiteur&action=consultervoitures&id=" . $voiture['ID'] . "\">"; ?>
           <div class="relative">
-              <img class="w-full" src="./images/mercedes-vito-blanc/avant.png" alt="Voiture rouge des années 90">
+          <?php echo "<img class=\"w-full\" src=".$voiture['IMG']." alt=\"Voiture\">" ?>
                 <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-              <div class="absolute bottom-0 right-0 bg-indigo-600 px-4 py-2 text-white text-sm hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out"><?php echo $voiture['PRIX'] . '€' ?></div>
+              <div class="absolute bottom-0 right-0 bg-clifford px-4 py-2 text-white text-sm hover:bg-white hover:text-clifford transition duration-500 ease-in-out"><?php echo $voiture['PRIX'] . '€' ?></div>
           </div>
           <div class="text-left px-6 py-4">
             <div class="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out"><?php echo $voiture['MARQUE'].' '.$voiture['MODELE']?></div>

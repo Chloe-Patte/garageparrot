@@ -2,7 +2,7 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   
     <div class="w-16 h-16">
-      <a href="index.php"> <img src="/home/storepl/www/img/garagevparrot.png" alt="Logo du site">
+      <a href="index.php"> <img src="http://nunesaccount.alwaysdata.net/test/garagevparrot.png" alt="Logo du site">
 </a>
     </div>
     <div class="flex md:order-2">

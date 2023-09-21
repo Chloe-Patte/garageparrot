@@ -14,8 +14,8 @@
       <?php echo $voiture['PRIX'] . '€' ?>
       </h2>
       <div class="flex justify-center">
-        <a class="lg:hidden block text-white py-3 px-5 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-        href="index.php?controleur=gestionvisiteur&action=consulterfdc">
+       <?php echo "<a class=\"lg:hidden block text-white py-3 px-5 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300\"
+        href=\"index.php?controleur=gestionvisiteur&action=consulterfcv&marque=" . $voiture['MARQUE'] . "&modele=".$voiture['MODELE']."&annee=".$voiture['ANNEE']."\">"; ?>
           <i class="lni lni-envelope"></i><i class="fa-solid fa-envelope" style="color: #ffffff"></i> 
           Contactez-nous
         </a>
@@ -23,7 +23,8 @@
       
     </div>
     <div class="hidden lg:block lg:w-1/3">
-    <?php echo "<a class=\"md:hidden-block text-white py-3 px-5 ml-6 mr-10 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300\" href=\"index.php?controleur=gestionvisiteur&action=consulterfcv&marque=" . $voiture['MARQUE'] . "&modele= " . $voiture['MODELE'] . "&annee=" . $voiture['ANNEE'] . "\">"; ?>
+    <?php echo "<a class=\"md:hidden-block text-white py-3 px-5 ml-6 mr-10 bg-clifford text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300\" 
+    href=\"index.php?controleur=gestionvisiteur&action=consulterfcv&marque=" . $voiture['MARQUE'] . "&modele= " . $voiture['MODELE'] . "&annee=" . $voiture['ANNEE'] . "\">"; ?>
 
         <i class="lni lni-envelope"></i><i class="fa-solid fa-envelope" style="color: #ffffff"></i> 
         Contactez-nous
@@ -105,11 +106,11 @@
         <div class="grid grid-cols-2">
         <li class="w-full border-t-2 border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Classe véhicule</p>
-          <p>SUV</p>
+          <p><?php echo $voiture['TYPES_VOITURE'] ?></p>
         </li>
         <li class="w-full border-t-2 border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Sellerie</p>
-          <p>Tissu</p>
+          <p><?php echo $voiture['SELLERIE'] ?></p>
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Places</p>
@@ -117,7 +118,7 @@
         </li>
         <li class="w-full border-b-2 border-neutral-100 border-opacity-100 py-4">
           <p class="font-semibold">Couleur</p>
-          <p>Rouge</p>
+          <p><?php echo $voiture['COULEUR'] ?></p>
         </li>
         </div>
         <div class="grid grid-cols-2">
@@ -128,7 +129,7 @@
         </div>
       </ul>
   </div>
-  <!-- moteur,transmission et conso-->
+  <!--
   <h3 class="text-gray-900 text-left font-semibold text-2xl px-8 md:px-16 lg:px-32 xl:px-32 pt-8">
     Moteur, transmission & consommation
   </h3>
@@ -154,7 +155,8 @@
         </div>
       </ul>
   </div>
-  <!-- historique du véhicule-->
+
+  
   <h3 class="text-gray-900 text-left font-semibold text-2xl px-8 md:px-16 lg:px-32 xl:px-32 pt-8">
     Historique du véhicule
   </h3>
@@ -189,7 +191,7 @@
       </ul>
   </div>
 
-  <!-- équipements du véhicule-->
+  
   <h2 class="text-gray-900 text-center font-bold text-3xl mt-10 underline underline-offset-8 decoration-clifford">
     Équipements
   </h2>
@@ -228,5 +230,5 @@
         </li>
         </div>
       </ul>
-  </div>
+  </div> -->
 </div>
